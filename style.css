@@ -1,0 +1,168 @@
+/* ===============================
+   🌐 GLOBAL + ROOT VARIABLES
+================================ */
+:root {
+  --bg-main: #0B0F1A;
+  --bg-card: rgba(255, 255, 255, 0.05);
+
+  --primary: #4F7CFF;
+  --secondary: #8B5CF6;
+
+  --text-main: #E5E7EB;
+  --text-light: #9CA3AF;
+
+  --glass-border: rgba(255,255,255,0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===============================
+   🌌 BODY + BACKGROUND
+================================ */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at 20% 30%, #1d2b64, transparent 40%),
+              radial-gradient(circle at 80% 70%, #6a11cb, transparent 40%),
+              #0B0F1A;
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* ===============================
+   🧊 GLASS CARD
+================================ */
+.glass {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* ===============================
+   ✨ HERO TITLE
+================================ */
+.hero-title {
+  font-size: 60px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #4F7CFF, #8B5CF6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===============================
+   🔘 BUTTON (PREMIUM STYLE)
+================================ */
+.btn-premium {
+  background: linear-gradient(135deg, #4F7CFF, #8B5CF6);
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-premium:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(79,124,255,0.4);
+}
+
+/* ===============================
+   🎯 OPTIONS (QUIZ)
+================================ */
+.option {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 14px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.option:hover {
+  border-color: var(--primary);
+  background: rgba(79,124,255,0.1);
+  transform: translateX(6px);
+}
+
+/* ===============================
+   📊 PROGRESS BAR
+================================ */
+.progress-container {
+  width: 100%;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#progress {
+  background: linear-gradient(90deg, #4F7CFF, #8B5CF6);
+  height: 6px;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+/* ===============================
+   ⏳ TIMER
+================================ */
+#timer {
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+/* ===============================
+   🏆 RESULT PAGE
+================================ */
+#result {
+  animation: fadeIn 0.6s ease;
+}
+
+#score {
+  font-size: 40px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #4F7CFF, #8B5CF6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===============================
+   🎬 ANIMATIONS
+================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeIn 0.6s ease;
+}
+
+/* ===============================
+   📱 RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .glass {
+    padding: 20px;
+  }
+.emoji {
+  -webkit-text-fill-color: initial !important;
+  color: initial !important;
+  font-size: 48px;
+}
+}

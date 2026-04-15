@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Neon Quiz App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-[#0f172a] text-white font-[Poppins] overflow-x-hidden">
+
+<!-- 🔥 Animated Background -->
+<div class="animated-bg"></div>
+
+<!-- 🏠 HOME PAGE -->
+<section id="home" class="h-screen flex flex-col justify-center items-center text-center">
+  <h1 class="hero-title">
+  Smart Quiz Experience <span class="emoji">🧠</span>
+</h1>
+<p class="text-gray-400 mb-6">
+  A sleek, interactive quiz experience built for performance, engagement, and fun.
+</p>
+
+
+<p class="text-sm text-gray-500 mb-2">
+  Choose your category 
+</p>
+<select id="category" class="mb-6 px-4 py-2 rounded bg-gray-800">
+    <option value="tech">Tech</option>
+    <option value="gk">General Knowledge</option>
+    <option value="math">Math</option>
+    <option value="physics">Physics</option>
+</select>
+
+  <button onclick="startQuiz()" class="btn-premium ✅ px-8 py-3 rounded-xl text-lg">
+    Start Challenge 🚀
+  </button>
+</section>
+
+<!-- 🧠 QUIZ PAGE -->
+<section id="quiz" class="hidden p-6 max-w-2xl mx-auto">
+
+  <!-- Progress -->
+ <div class="progress-container mb-6">
+  <div id="progress"></div>
+  </div>
+
+  <!-- Timer -->
+  <div class="text-right mb-4">
+    ⏳ <span id="timer">15</span>s
+  </div>
+
+  <!-- Question -->
+  <h2 id="question" class="text-xl mb-6"></h2>
+
+  <!-- Options -->
+  <div id="options" class="space-y-3"></div>
+</section>
+
+<!-- 🏆 RESULT PAGE -->
+<section id="result" class="hidden h-screen flex flex-col justify-center items-center text-center">
+  <h2 class="text-4xl mb-4">🎉 Result</h2>
+  <p class="text-2xl mb-4">Score: <span id="score">0</span></p>
+  <p id="message" class="mb-6 text-lg"></p>
+
+  <button onclick="restartQuiz()" class="btn-premium ✅ px-6 py-3 rounded-xl">
+    Restart
+  </button>
+</section>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
