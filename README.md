@@ -52,12 +52,6 @@ quiz-app/
 
 ---
 
-## 📸 Screenshots
-
-(Add your screenshots here)
-
----
-
 ## 🚀 Future Improvements
 
 - 🔊 Sound effects (correct/wrong)
